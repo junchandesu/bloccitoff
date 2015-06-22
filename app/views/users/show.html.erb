@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-md-10">
+		<h2>Your information.</h2>
+		<ul class="list-group">
+			<% if @user.name %>
+			<li class="list-group-item">
+				Your username:<%= @user.name %></li>
+			<% end %>
+			<li class="list-group-item">Your email: <%= @user.email %></li>
+			<li class="list-group-item">Signed up on <%= @user.created_at %></li>
+    	</ul>
+    </div>
+</div>
