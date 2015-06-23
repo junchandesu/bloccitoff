@@ -1,0 +1,6 @@
+<%= form_for [user, item] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_area :name, rows:8, class: "form-control", placeholder: "Enter To Do list item" %>
+	<%= f.submit "Save", class: "btn btn-info" %>
+<% end %>
+

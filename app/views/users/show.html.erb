@@ -8,6 +8,21 @@
 			<% end %>
 			<li class="list-group-item">Your email: <%= @user.email %></li>
 			<li class="list-group-item">Signed up on <%= @user.created_at %></li>
+
     	</ul>
+
+    	<h2>Your To Do list.</h2>
+
+    	<ul class="list-group">
+    		
+		<%= render partial: 'items/item', collection: @items %>
+			
+		</ul>
+
+    	
+		
+		<h4>Lets create a new to-do item!</h4>
+
+        <%= render partial: 'items/form', locals: { user: @user, item: Item.new } %>
     </div>
 </div>
