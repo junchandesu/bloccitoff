@@ -4,8 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find(current_user.id)
-  	@items = @user.items
+  	@items = current_user.items
   end
 end
 
