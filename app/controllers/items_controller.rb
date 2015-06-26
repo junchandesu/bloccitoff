@@ -17,4 +17,19 @@ class ItemsController < ApplicationController
 			redirect_to [@user]
 		end
 	end
+
+	def destroy
+				
+		@item = current_user.items.find(params[:id])
+
+		if @item.destroy
+			flash[:notice] = "New item name was deleted."
+			redirect_to [current_user, @item]
+		else
+			flash[:error] = "There was an error deleting this item."
+			redirect_to [current_user, @item]
+		end
+
+
+	end
 end
