@@ -11,16 +11,15 @@
 
     	</ul>
 
-    	<h2>Your To Do list.</h2>
+    	<h2>Do list Due: <span id="listCount"><%= @items.count %></span><span id="updatedCount"></span> things</h2>
+    	<h5>Click check-mark when you are done successfully! Good job!</h5>
 
-    	<ul class="list-group">
+    	<ul class="list-group" id="mylist">
     		
 		<%= render partial: 'items/item', collection: @items %>
 			
 		</ul>
-
-    	
-		
+		</br>
 		<h4>Lets create a new to-do item!</h4>
 
         <%= render partial: 'items/form', locals: { item: Item.new } %>

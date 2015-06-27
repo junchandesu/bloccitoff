@@ -1,1 +1,7 @@
-$('#ite();m-' +<% @item.id %>).hide
+<% if @item.destroyed? %>
+	$('#item-' +<%= @item.id %>).hide("slow");
+	$('#listCount').hide();
+	$('#updatedCount').html('<%= @items.count %>');
+<% else %>
+	$('#item-' +<%= @item.id %>).prepend("<div class='alert alert-danger'><%= flash[:error] %></div>")
+<% end %>	
