@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-md-10">
+	<div class="col-md-11">
 		<h2>Your information.</h2>
 		<ul class="list-group">
 			<% if current_user.name %>
@@ -10,18 +10,17 @@
 			<li class="list-group-item">Signed up on <%= current_user.created_at %></li>
 
     	</ul>
-
-    	<h2>Do list Due: <span id="listCount"><%= @items.count %></span><span id="updatedCount"></span> things</h2>
-    	<h5>Click check-mark when you are done successfully! Good job!</h5>
-
-    	<ul class="list-group" id="mylist">
-    		
-		<%= render partial: 'items/item', collection: @items %>
-			
-		</ul>
-		</br>
-		<h4>Lets create a new to-do item!</h4>
-
-        <%= render partial: 'items/form', locals: { item: Item.new } %>
     </div>
 </div>
+ 
+ <h2>Do list Due: <span id="listCount"><%= @items.count %></span><span id="updatedCount"></span> things</h2>
+    	<h5>Click check-mark when you are done successfully! Good job!</h5>
+
+<div class="row"> 
+	<div class="col-md-11">
+		<%= render partial: 'items/item', collection: @items %>
+	</div>
+</div>
+</br>
+<h4>Lets create a new to-do item!</h4>
+    <%= render partial: 'items/form', locals: { item: Item.new } %>

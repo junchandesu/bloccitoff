@@ -32,6 +32,7 @@ class ItemsController < ApplicationController
 			flash[:error] = "There was an error deleting this item."
 		end
 		respond_with(@user)
-
 	end
+
+	
 end
