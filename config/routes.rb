@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
   root to: "welcome#index"
 
+  resources :todos, only: [:new, :create, :show]
+
 end
