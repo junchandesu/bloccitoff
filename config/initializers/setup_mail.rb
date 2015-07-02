@@ -7,7 +7,7 @@ if Rails.env.development? || Rails.env.production?
     #address: '209.61.151.224',
     user_name:      ENV['MAILGUN_SMTP_LOGIN'],
     password:       ENV['MAILGUN_SMTP_PASSWORD'],
-    domain:         'app7355350300df44f99ca7e86439d9d4db.mailgun.org',
+    domain:         'app4c75e3597ee5485792bcaa0a8cdcfb0e.mailgun.org',
     enable_starttls_auto: true
   }
 end
