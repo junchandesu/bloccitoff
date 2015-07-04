@@ -47,8 +47,6 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-   config.action_mailer.default_url_options = { host: 'app4c75e3597ee5485792bcaa0a8cdcfb0e.mailgun.org' }
-   config.action_mailer.delivery_method = :smtp
-   config.action_mailer.perform_deliveries = true
+
 
   end
